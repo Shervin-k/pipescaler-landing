@@ -13,23 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* RESET & BASE */
-    *,*::before,*::after { box-sizing: border-box; margin:0; padding:0 }
-    html, body { width:100%; font-family:'Poppins',system-ui,sans-serif; overflow-x:hidden; color:#fff; }
+    /* ----- RESET & BASE ----- */
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+    html, body { height:100%; width:100%; font-family:'Poppins',system-ui,sans-serif; overflow-x:hidden; color:#fff; }
 
-    /* VIDEO BACKGROUND */
+    /* ----- VIDEO BACKGROUND ----- */
     #bg-video {
-      position: fixed; top:0; left:0; width:100%; height:100%;
-      object-fit: cover; z-index: -2;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
     }
+    /* subtle overlay for contrast */
     #overlay {
-      position: fixed; inset:0;
-      background: rgba(0,0,0,0.35); z-index: -1;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: -1;
     }
 
-    /* HERO */
+    /* ----- HERO ----- */
     .hero {
-      min-height: 150vh;        /* jetzt länger für Scrollen */
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -42,27 +47,46 @@
       line-height: 1.15;
     }
 
-    /* FOOTER */
+    /* ----- FOOTER ----- */
     footer {
-      position: fixed; bottom:0; left:0; width:100%;
-      background: #fff; color:#222;
-      display: flex; flex-direction: column; align-items: center; gap: .5rem;
-      padding:1rem 0; z-index:10;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      color: #222;
+      text-align: center;
+      padding: 1rem 0;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
     }
-    footer img { height:40px; width:auto; }
-    footer a { color:#222; text-decoration:none; font-weight:600; }
+    footer img {
+      height: 40px;
+      width: auto;
+    }
+    footer a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
+  <!-- Background video -->
   <video id="bg-video" autoplay muted loop playsinline poster="assets/fallback_bg.png">
     <source src="assets/pipescaler_bg.mp4" type="video/mp4" />
   </video>
   <div id="overlay"></div>
 
+  <!-- Hero content -->
   <section class="hero">
     <h1>Building the Future of<br>Enterprise Sales Outreach</h1>
   </section>
 
+  <!-- Footer -->
   <footer>
     <img src="assets/Pipescaler_logo.svg" alt="Pipescaler Logo" />
     Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a>
