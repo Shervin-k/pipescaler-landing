@@ -14,55 +14,52 @@
 
   <style>
     /* ----- RESET & BASE ----- */
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;width:100%;font-family:'Poppins',system-ui,sans-serif;overflow-x:hidden;color:#fff}
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+    html, body { height:100%; width:100%; font-family:'Poppins',system-ui,sans-serif; overflow-x:hidden; color:#fff; }
 
     /* ----- VIDEO BACKGROUND ----- */
-    #bg-video{
-      position:fixed;
-      top:0;left:0;width:100%;height:100%;
-      object-fit:cover;
-      z-index:-2;
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
     }
-    /* subtle overlay for contrast */
-    #overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:-1}
 
     /* ----- HERO ----- */
-    .hero{
-      height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:0 5vw;
+    .hero {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5vw;
     }
-    h1{
-      font-weight:500;
-      font-size:clamp(1.2rem,4vw,2.8rem);
-      line-height:1.15;
+    h1 {
+      font-weight: 500;
+      font-size: clamp(1.2rem,4vw,2.8rem);
+      line-height: 1.15;
     }
 
     /* ----- FOOTER ----- */
-    footer{
-      background:#fff;
-      color:#222;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      padding:2rem 1rem;
-      gap:.8rem;
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      z-index: 10;
     }
-    footer img{height:48px;width:auto}
-    footer a{color:#222;text-decoration:none}
+    footer a { color: #fff; text-decoration: none; }
   </style>
 </head>
 <body>
   <!-- Background video -->
   <video id="bg-video" autoplay muted loop playsinline poster="assets/fallback_bg.png">
     <source src="assets/pipescaler_bg.mp4" type="video/mp4" />
-    <!-- If the browser doesn’t support the video element -->
   </video>
-  <div id="overlay"></div>
 
   <!-- Hero content -->
   <section class="hero">
@@ -71,8 +68,7 @@
 
   <!-- Footer -->
   <footer>
-    <div>Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a></div>
-    <div style="margin-top:.5rem">©2025 Pipescaler</div>
+    Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a> &nbsp;|&nbsp; ©2025 Pipescaler
   </footer>
 </body>
 </html>
