@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Pipescaler</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ----- RESET & BASE ----- */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;width:100%;font-family:'Poppins',system-ui,sans-serif;overflow-x:hidden;color:#fff}
+
+    /* ----- VIDEO BACKGROUND ----- */
+    #bg-video{
+      position:fixed;
+      top:0;left:0;width:100%;height:100%;
+      object-fit:cover;
+      z-index:-2;
+    }
+    /* subtle overlay for contrast */
+    #overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:-1}
+
+    /* ----- HERO ----- */
+    .hero{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 5vw;
+    }
+    h1{
+      font-weight:500;
+      font-size:clamp(1.2rem,4vw,2.8rem);
+      line-height:1.15;
+    }
+
+    /* ----- FOOTER ----- */
+    footer{
+      background:#fff;
+      color:#222;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:2rem 1rem;
+      gap:.8rem;
+    }
+    footer img{height:48px;width:auto}
+    footer a{color:#222;text-decoration:none}
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <video id="bg-video" autoplay muted loop playsinline poster="assets/fallback_bg.png">
+    <source src="assets/pipescaler_bg.mp4" type="video/mp4" />
+    <!-- If the browser doesn’t support the video element -->
+  </video>
+  <div id="overlay"></div>
+
+  <!-- Hero content -->
+  <section class="hero">
+    <h1>Building the Future of<br>Enterprise Sales Outreach</h1>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a></div>
+    <div style="margin-top:.5rem">©2025 Pipescaler</div>
+  </footer>
+</body>
+</html>
