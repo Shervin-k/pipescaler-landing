@@ -24,6 +24,13 @@
       object-fit: cover;
       z-index: -2;
     }
+    /* subtle overlay for contrast */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: -1;
+    }
 
     /* ----- HERO ----- */
     .hero {
@@ -46,13 +53,25 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
+      background: #fff;
+      color: #222;
       text-align: center;
       padding: 1rem 0;
       z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
     }
-    footer a { color: #fff; text-decoration: none; }
+    footer img {
+      height: 40px;
+      width: auto;
+    }
+    footer a {
+      color: #222;
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -60,6 +79,7 @@
   <video id="bg-video" autoplay muted loop playsinline poster="assets/fallback_bg.png">
     <source src="assets/pipescaler_bg.mp4" type="video/mp4" />
   </video>
+  <div id="overlay"></div>
 
   <!-- Hero content -->
   <section class="hero">
@@ -68,7 +88,9 @@
 
   <!-- Footer -->
   <footer>
-    Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a> &nbsp;|&nbsp; ©2025 Pipescaler
+    <img src="assets/Pipescaler_logo.svg" alt="Pipescaler Logo" />
+    Contact: <a href="mailto:shervin@pipescaler.com">shervin@pipescaler.com</a>
+    ©2025 Pipescaler
   </footer>
 </body>
 </html>
